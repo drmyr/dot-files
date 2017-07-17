@@ -1,5 +1,5 @@
 var comNetUrlsToBlock = {
-			regexPrefix: "*",
+			regexPrefix: "*[^a-z]",
 			regexSuffix: ".(com|net)[^a-z]*",
 			list: ["double-click",
 			"doubleclick",
@@ -365,7 +365,7 @@ var comNetUrlsToBlock = {
 var wordsToBlock = {
 			regexPrefix: "*",
 			regexSuffix: "*",
-			list: ["adsense","page-view","pageview","page_view","pagead","tracker","campaign","pixel","stats","recaptcha","ptracking","adexchange","beacon","syndication","_logs","generate_204","impression","ping","pre-bid","count-data","prebid","countdata"]
+			list: ["adsense","page-view","pageview","page_view","pagead","tracker","campaign","pixel","stats","recaptcha","ptracking","adexchange","beacon","syndication","_logs","generate_204","impression","ping","pre-bid","count-data","prebid","countdata","showads","adfarm"]
 		   };
 
 var nonComNetUrlsToBlock = {
