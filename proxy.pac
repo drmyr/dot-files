@@ -80,10 +80,12 @@ var comNetUrlsToBlock = {
 			"bnmla",
 			"bootstrapcdn",
 			"bounceexchange",
+			"braintreegateway",
 			"bridgetrack",
 			"brightcove",
 			"btrll",
 			"bttrack",
+			"buysellads",
 			"budgetedbauer",
 			"c1exchange",
 			"carbonads",
@@ -285,6 +287,7 @@ var comNetUrlsToBlock = {
 			"scorecardresearch",
 			"securedvisit",
 			"securemetrics.apple",
+			"servedby-buysellads",                
 			"servedbyopenx",
 			"serving-sys",
 			"services.visualstudio",
@@ -327,6 +330,7 @@ var comNetUrlsToBlock = {
 			"travelaudience",
 			"tribalfusion",
 			"truoptik",
+			"truste",
 			"tubemogul",
 			"turn",
 			"twimg",
@@ -340,6 +344,7 @@ var comNetUrlsToBlock = {
 			"visiblemeasures",
 			"visualdna",
 			"visualrevenue",
+			"visualwebsiteoptimizer",
 			"vmweb",
 			"voicefive",
 			"w3counter",
@@ -375,7 +380,10 @@ var wordsToBlock = {
 				"adfarm",
 				"adsense",
 				"ad_radar",
+				"analytics.",
+				"analytics=",
 				"beacon",
+				"[^a-z]callback",
 				"campaign",
 				"countdata",
 				"count-data",
@@ -392,6 +400,8 @@ var wordsToBlock = {
 				"pre-bid",
 				"ptracking",
 				"recaptcha",
+				"referer=",
+				"referrer=",
 				"showads",
 				"stats",
 				"syndication",
@@ -420,6 +430,8 @@ var nonComNetUrlsToBlock = {
 		"gemius.pl",
 		"hrnorth.se",
 		"ioam.de",
+		"mailmunch.co",
+		"misosoup.io",
 		"ntv.io",
 		"prfct.co",
 		"roq.ad",
@@ -465,7 +477,7 @@ function FindProxyForURL(url, host) {
 		for(var list of listsToBlock) {
 			if(isValueInList(url, list)) {
 				alert("BLOCKED: " + url.toString());
-				return "PROXY localhost:9090";
+				return "PROXY localhost:81";
 			}
 		}
 	}
