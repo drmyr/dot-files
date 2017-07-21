@@ -8,13 +8,30 @@ function dots() { cd ~/Git/dot-files; }
 
 alias gs='git status'
 alias gd='git diff'
+alias wth='curl http://wttr.in/cleveland'
 
-function kuizhao() {
+function cbs() {
+	fuzzy $(cat /dev/clipboard)
+}
+
+function kuis() {
 	echo $1
 	currdir=$(pwd)
 	kui && cd ./components
-	egrep -Rni ".*$1.*" | sed '/.*\.min.\js/d;/.*\/libs\/angular.*/d'
+	fuzzy $1 | sed '/.*\.min.\js/d;/.*\/libs\/angular.*/d'
 	cd $currdir
+}
+
+function kwebs() {
+	echo $1
+	currdir=$(pwd)
+	kweb && cd ./WebApi
+	fuzzy $1 | sed '/.*\.dll/d;/.*\.pdb/d'
+	cd $currdir
+}
+
+function fuzzy() {
+	egrep -Rni ".*$1.*"
 }
 
 function gsa() {
