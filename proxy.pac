@@ -254,6 +254,8 @@ var comNetUrlsToBlock = {
 			"petametrics",
 			"pippio",
 			"pixel.wp",
+			"platform.linkedin",
+			"platform.twitter",
 			"polarmobile",
 			"postrelease",
 			"ppjol",
