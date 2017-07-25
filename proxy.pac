@@ -1,4 +1,5 @@
 var comNetUrlsToBlock = {
+			useHost: true,
 			regexPrefix: "*[^a-z]",
 			regexSuffix: ".(com|net)[^a-z]*",
 			list: ["double-click",
@@ -372,6 +373,7 @@ var comNetUrlsToBlock = {
 		  };
 
 var wordsToBlock = {
+			useHost: false,
 			regexPrefix: "*",
 			regexSuffix: "*",
 			list: [
@@ -410,6 +412,7 @@ var wordsToBlock = {
 		   };
 
 var nonComNetUrlsToBlock = {
+		useHost: true,
 		regexPrefix: "*",
 		regexSuffix: "[^a-z]*",
 		list: ["districtm.ca",
@@ -449,7 +452,7 @@ var nonComNetUrlsToBlock = {
 		"yadro.ru",
 		"gfx.ms",
 		"onestore.ms",
-		"t.co",
+		"[^a-z]t.co",
 		"tns-counter.ru"
 ]
 };
@@ -457,14 +460,16 @@ var nonComNetUrlsToBlock = {
 var listsToBlock = [wordsToBlock, comNetUrlsToBlock, nonComNetUrlsToBlock];
 
 var bypassList = {
+			useHost: false,
 			regexPrefix: "*",
 			regexSuffix: "*",
 			list: ["better.fyi","ajax.googleapis.com","maps.googleapis.com","kalibrate.local"]
 		 };
 
-function isValueInList(val, listObj) {
+function isValueInList(url, host, listObj) {
 	for(var listItem of listObj.list) {
-		if(shExpMatch(val, listObj.regexPrefix + listItem + listObj.regexSuffix)) {
+		var urlOrHost = listObj.useHost ? host : url;
+		if(shExpMatch(urlOrHost, listObj.regexPrefix + listItem + listObj.regexSuffix)) {
 			alert("TRIGGER: " + listItem.toString());
 			return true;
 		}
@@ -473,9 +478,9 @@ function isValueInList(val, listObj) {
 }
 
 function FindProxyForURL(url, host) {
-	if(!isValueInList(url, bypassList)) {
+	if(!isValueInList(url, host, bypassList)) {
 		for(var list of listsToBlock) {
-			if(isValueInList(url, list)) {
+			if(isValueInList(url, host, list)) {
 				alert("BLOCKED: " + url.toString());
 				return "PROXY localhost:81";
 			}
