@@ -171,6 +171,7 @@ var comNetUrlsToBlock = {
 			"gtrk.s3.amazonaws",
 			"gumgum",
 			"gwallet",
+			"hfc195b",
 			"hlserve",
 			"hotjar",
 			"hs-analytics",
@@ -247,8 +248,11 @@ var comNetUrlsToBlock = {
 			"openx",
 			"optimahub",
 			"optimizely",
+			"optnmstr",
 			"outbrain",
 			"owneriq",
+			"pages03",
+			"pardot",
 			"parsely",
 			"peer39",
 			"perfectmarket",
@@ -435,9 +439,11 @@ var nonComNetUrlsToBlock = {
 		"gemius.pl",
 		"hrnorth.se",
 		"ioam.de",
+		"keywee.co",
 		"mailmunch.co",
 		"misosoup.io",
 		"ntv.io",
+		"po.st",
 		"prfct.co",
 		"roq.ad",
 		"rutarget.ru",
@@ -462,16 +468,15 @@ var nonComNetUrlsToBlock = {
 var listsToBlock = [wordsToBlock, comNetUrlsToBlock, nonComNetUrlsToBlock];
 
 var bypassList = {
-			useHost: false,
+			useHost: true,
 			regexPrefix: "*",
 			regexSuffix: "*",
 			list: ["better.fyi","ajax.googleapis.com","maps.googleapis.com","kalibrate.local"]
 		 };
 
-function isValueInList(url, host, listObj) {
+function isValueInList(val, listObj) {
 	for(var listItem of listObj.list) {
-		var urlOrHost = listObj.useHost ? host : url;
-		if(shExpMatch(urlOrHost, listObj.regexPrefix + listItem + listObj.regexSuffix)) {
+		if(shExpMatch(val, listObj.regexPrefix + listItem + listObj.regexSuffix)) {
 			alert("TRIGGER: " + listItem.toString());
 			return true;
 		}
@@ -480,9 +485,9 @@ function isValueInList(url, host, listObj) {
 }
 
 function FindProxyForURL(url, host) {
-	if(!isValueInList(url, host, bypassList)) {
+	if(!isValueInList(host, bypassList)) {
 		for(var list of listsToBlock) {
-			if(isValueInList(url, host, list)) {
+			if(isValueInList(url, list)) {
 				alert("BLOCKED: " + url.toString());
 				return "PROXY localhost:81";
 			}
