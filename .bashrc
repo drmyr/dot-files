@@ -10,6 +10,10 @@ alias gs='git status'
 alias gd='git diff'
 alias wth='curl http://wttr.in/cleveland'
 
+function trim() {
+    mv "$1" $(echo "$1" | sed 's/ //g')
+}
+
 function cbs() {
 	fuzzy $(cat /dev/clipboard)
 }
