@@ -16,7 +16,11 @@ function trim() {
 }
 
 function cbs() {
-	fuzzy $(cat /dev/clipboard)
+	if [[ "$OSTYPE" == "linux-gnu" ]]; then
+		fuzzy $(xclip -o)
+	else
+		fuzzy $(cat /dev/clipboard)
+	fi
 }
 
 function kuis() {
