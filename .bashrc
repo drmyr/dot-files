@@ -8,7 +8,7 @@ function dots() { cd ~/Git/dot-files; }
 
 alias gs='git status'
 alias gd='git diff'
-alias gc'git checkout'
+alias gc='git checkout'
 alias wth='curl http://wttr.in/cleveland'
 
 function trim() {
