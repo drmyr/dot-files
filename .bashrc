@@ -8,7 +8,7 @@ function dots() { cd ~/Git/dot-files; }
 
 alias gs='git status'
 alias gd='git diff'
-alias gc'git checkout'
+alias gc='git checkout'
 alias wth='curl http://wttr.in/cleveland'
 
 function trim() {
@@ -16,7 +16,11 @@ function trim() {
 }
 
 function cbs() {
-	fuzzy $(cat /dev/clipboard)
+	if [[ "$OSTYPE" == "linux-gnu" ]]; then
+		fuzzy $(xclip -o)
+	else
+		fuzzy $(cat /dev/clipboard)
+	fi
 }
 
 function kuis() {
