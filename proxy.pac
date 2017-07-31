@@ -321,6 +321,7 @@ var comNetUrlsToBlock = {
 			"statcounter",
 			"staticworld",
 			"stats.wp",
+			"statsevent",
 			"sundaysky",
 			"survata",
 			"surveymonkey",
@@ -365,6 +366,7 @@ var comNetUrlsToBlock = {
 			"wtp101",
 			"xad",
 			"xg4ken",
+			"xpanama",
 			"yieldify",
 			"yieldlab",
 			"yieldmo",
@@ -391,9 +393,11 @@ var wordsToBlock = {
 				"adexchange",
 				"adfarm",
 				"adsense",
+				"adserver",
 				"ad_radar",
 				"analytics.",
 				"analytics=",
+				"browser-metrics",
 				"beacon",
 				"[^a-z]callback",
 				"campaign",
@@ -459,6 +463,11 @@ var nonComNetUrlsToBlock = {
 		"weborama.fr",
 		"weborama.io",
 		"workey.se",
+		"wraug5vv72b28fch.pro",
+		"b2rrns9dgbx56tf5kc.agency",
+		"a1749y92ai7h2uwi4v7e.club",
+		"gff6166tdt2i4fc155zi11.info",
+		"8m5sew59gr.bid",
 		"wt1.rqtrk.eu",
 		"xplosion.de",
 		"yadro.ru",
@@ -475,7 +484,7 @@ var bypassList = {
 			useHost: true,
 			regexPrefix: "*",
 			regexSuffix: "*",
-			list: ["better.fyi","ajax.googleapis.com","maps.googleapis.com","kalibrate.local"]
+			list: ["better.fyi","ajax.googleapis.com","maps.googleapis.com","kalibrate.local","cdnjs.cloudflare"]
 		 };
 
 function isValueInList(val, listObj) {
