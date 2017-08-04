@@ -507,7 +507,7 @@ function FindProxyForURL(url, host) {
 		for(var list of listsToBlock) {
 			if(isValueInList(url, list)) {
 				alert("BLOCKED: " + url.toString());
-				return "PROXY localhost:81";
+				return "PROXY 127.0.0.1:0000";
 			}
 		}
 	}
