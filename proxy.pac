@@ -223,6 +223,7 @@ var comNetUrlsToBlock = {
 			"maxymiser",
 			"mdotm",
 			"media",
+			"media.business.spectrum",
 			"media6degrees",
 			"mediavoice",
 			"mediawallahscript",
@@ -409,6 +410,8 @@ var wordsToBlock = {
 				"fingerprint",
 				"generate_204",
 				"impression",
+				"log_event",
+				"log_interaction",
 				"page_view",
 				"pagead",
 				"pageview",
@@ -424,6 +427,7 @@ var wordsToBlock = {
 				"showads",
 				"stats",
 				"syndication",
+				"watch_autoplayrenderer",
 				"tracker"
 			]
 		   };
