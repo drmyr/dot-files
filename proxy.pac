@@ -325,6 +325,7 @@ var comNetUrlsToBlock = {
 			"staticworld",
 			"stats.wp",
 			"statsevent",
+			"summerhamster",
 			"sundaysky",
 			"survata",
 			"surveymonkey",
