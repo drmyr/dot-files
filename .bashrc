@@ -16,11 +16,11 @@ function trim() {
 }
 
 function cbs() {
-	if [[ "$OSTYPE" == "linux-gnu" ]]; then
-		fuzzy $(xclip -o)
-	else
-		fuzzy $(cat /dev/clipboard)
-	fi
+	case "$OSTYPE" in 
+	  darwin*)	egrep -Rni $(pbpaste) . ;;
+	  linux*)	fuzzy $(xclip -o) ;;
+  	  *)		fuzzy $(cat /dev/clipboard) ;;
+	esac
 }
 
 function kuis() {
