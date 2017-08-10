@@ -19,7 +19,7 @@ function cbs() {
 	case "$OSTYPE" in 
 	  darwin*)	egrep -Rni $(pbpaste) . ;;
 	  linux*)	fuzzy $(xclip -o) ;;
-  	  *)		fuzzy $(cat /dev/clipboard) ;;
+  	  msys*)	fuzzy $(cat /dev/clipboard) ;;
 	esac
 }
 
