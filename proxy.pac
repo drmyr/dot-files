@@ -13,6 +13,7 @@ var comNetUrlsToBlock = {
 			"googlesyndication",
 			"googletagmanager",
 			"googletagservices",
+			"csi.gstatic",
 			"2mdn",
 			"2o7",
 			"33across",
@@ -94,6 +95,9 @@ var comNetUrlsToBlock = {
 			"carbonads",
 			"cardlytics",
 			"casalemedia",
+			"cbsi",
+			"cbsiinteractive",
+			"cbsistatic",
 			"cedexis",
 			"chango",
 			"chartbeat",
@@ -163,6 +167,7 @@ var comNetUrlsToBlock = {
 			"fbcdn",
 			"flashtalking",
 			"flite",
+			"footprint",
 			"fonts",
 			"force",
 			"foresee",
@@ -173,6 +178,7 @@ var comNetUrlsToBlock = {
 			"ggpht",
 			"gigya",
 			"globalwebindex",
+			"go-mpulse",
 			"gravatar",
 			"gtrk.s3.amazonaws",
 			"gumgum",
@@ -213,6 +219,7 @@ var comNetUrlsToBlock = {
 			"lifestreet",
 			"lijit",
 			"lifefyre",
+			"livechatinc",
 			"liveperson",
 			"liverail",
 			"llnwd",
@@ -323,6 +330,7 @@ var comNetUrlsToBlock = {
 			"sovrn",
 			"spongecell",
 			"spotxchange",
+			"springserve",
 			"sprinkletxt",
 			"statcounter",
 			"staticworld",
@@ -357,6 +365,7 @@ var comNetUrlsToBlock = {
 			"typekit",
 			"undertone",
 			"univide",
+			"urbanairship",
 			"uts-af",
 			"videoamp",
 			"video.google",
@@ -398,6 +407,7 @@ var wordsToBlock = {
 			regexSuffix: "*",
 			list: [
 				"_logs",
+				"adchannel",
 				"adexchange",
 				"adfarm",
 				"[^a-z]ads[^a-z]",
@@ -412,6 +422,7 @@ var wordsToBlock = {
 				"campaign",
 				"countdata",
 				"count-data",
+				"eventtrack",
 				"fingerprint",
 				"generate_204",
 				"impression",
@@ -433,7 +444,8 @@ var wordsToBlock = {
 				"stats",
 				"syndication",
 				"watch_autoplayrenderer",
-				"tracker"
+				"tracker",
+				"tracking"
 			]
 		   };
 
@@ -447,6 +459,7 @@ var nonComNetUrlsToBlock = {
 		"adap.tv",
 		"adsrvr.org",
 		"adtech.de",
+		"akstat.io",
 		"app.link",
 		"atomdata.io",
 		"atom-data.io",
@@ -499,7 +512,7 @@ var bypassList = {
 			useHost: true,
 			regexPrefix: "*",
 			regexSuffix: "*",
-			list: ["better.fyi","ajax.googleapis.com","maps.googleapis.com","kalibrate.local","cdnjs.cloudflare"]
+			list: ["better.fyi","ajax.googleapis.com","maps.googleapis.com","local.kalibrate","cdnjs.cloudflare"]
 		 };
 
 function isValueInList(val, listObj) {
