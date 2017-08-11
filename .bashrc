@@ -1,6 +1,6 @@
 export PATH=$PATH:/c/Users/meyerd/AppData/Roaming/npm/node_modules/http-server/bin
 
-function emacs() { ~/EmacsApp/bin/emacs.exe $1; } 
+#function emacs() { ~/EmacsApp/bin/emacs.exe $1; } 
 function kui() { cd ~/Git/Kalibrate-UI; }
 function kdb() { cd ~/Git/Kalibrate-Database; }
 function kweb() { cd ~/Git/Kalibrate-Web-API; }
@@ -10,6 +10,7 @@ alias gs='git status'
 alias gd='git diff'
 alias gc='git checkout'
 alias wth='curl http://wttr.in/cleveland'
+alias ll='ls -al'
 
 function trim() {
     mv "$1" $(echo "$1" | sed 's/ //g')
