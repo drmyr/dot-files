@@ -428,6 +428,7 @@ var wordsToBlock = {
 				"fingerprint",
 				"gen_204",
 				"generate_204",
+				"get_midroll_info",
 				"get_video_info",
 				"get_video_metadata",
 				"impression",
@@ -454,7 +455,8 @@ var wordsToBlock = {
 				"watch_autoplayrenderer",
 				"watch_fragments",
 				"tracker",
-				"tracking"
+				"tracking",
+				"videogoodput"
 			]
 		   };
 
