@@ -12,6 +12,12 @@ alias gc='git checkout'
 alias wth='curl http://wttr.in/cleveland'
 alias ll='ls -al'
 
+function gacp() {
+	git add .
+	git commit -m "$1"
+	git push
+}
+
 function trim() {
     mv "$1" $(echo "$1" | sed 's/ //g')
 }
