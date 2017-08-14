@@ -24,7 +24,7 @@ function trim() {
 
 function cbs() {
 	case "$OSTYPE" in 
-	  darwin*)	egrep -Rni $(pbpaste) . ;;
+	  darwin*)	fuzzy $(pbpaste) . ;;
 	  linux*)	fuzzy $(xclip -o) ;;
   	  msys*)	fuzzy $(cat /dev/clipboard) ;;
 	esac
