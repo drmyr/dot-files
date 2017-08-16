@@ -14,6 +14,7 @@ var comNetUrlsToBlock = {
 			"googletagmanager",
 			"googletagservices",
 			"csi.gstatic",
+			"fonts.gstatic",
 			"2mdn",
 			"2o7",
 			"33across",
@@ -256,6 +257,7 @@ var comNetUrlsToBlock = {
 			"newrelic",
 			"newsinc",
 			"nexac",
+			"npttech",
 			"nr-data",
 			"nuggad",
 			"omtrdc",
@@ -398,6 +400,7 @@ var comNetUrlsToBlock = {
 			"ytimg",
 			"yume",
 			"zemanta",
+			"zendesk",
 			"zergnet",
 			"zqtk"
 ]
@@ -417,6 +420,7 @@ var wordsToBlock = {
 				"adsense",
 				"adserver",
 				"ad_radar",
+				"advertising",
 				"analytics.",
 				"analytics=",
 				"browser-metrics",
@@ -438,6 +442,7 @@ var wordsToBlock = {
 				"log_event",
 				"log_interaction",
 				"mac_204",
+				"metrika",
 				"page_view",
 				"pagead",
 				"pageview",
@@ -526,7 +531,7 @@ var bypassList = {
 			useHost: true,
 			regexPrefix: "*",
 			regexSuffix: "*",
-			list: ["better.fyi","ajax.googleapis.com","maps.googleapis.com","local.kalibrate","cdnjs.cloudflare"]
+			list: ["better.fyi","ajax.googleapis.com","maps.googleapis.com","local.kalibrate","cdnjs.cloudflare","chart.apis.google.com"]
 		 };
 
 function isValueInList(val, listObj) {
