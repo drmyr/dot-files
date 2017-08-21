@@ -264,6 +264,7 @@ var comNetUrlsToBlock = {
 			"omtrdc",
 			"onesignal",
 			"onestatfree",
+			"ooyala",
 			"opendsp",
 			"openx",
 			"optimahub",
@@ -279,7 +280,7 @@ var comNetUrlsToBlock = {
 			"petametrics",
 			"pippio",
 			"pixel.wp",
-      "placemytag",
+      			"placemytag",
 			"platform.linkedin",
 			"platform.twitter",
 			"polarmobile",
@@ -397,6 +398,7 @@ var comNetUrlsToBlock = {
 			"yieldpartners",
 			"yimg",
 			"yldbt",
+			"youbora",
 			"youtubei.youtube",
 			"youtube-nocookie",
 			"ytimg",
@@ -477,7 +479,7 @@ var nonComNetUrlsToBlock = {
 		"districtm.ca",
 		"google.se",
 		"adap.tv",
-    "adk2.co",
+		"adk2.co",
 		"adsrvr.org",
 		"adtech.de",
 		"akstat.io",
@@ -534,7 +536,13 @@ var bypassList = {
 			useHost: true,
 			regexPrefix: "*",
 			regexSuffix: "*",
-			list: ["better.fyi","ajax.googleapis.com","maps.googleapis.com","local.kalibrate","cdnjs.cloudflare","chart.apis.google.com"]
+			list: ["better.fyi",
+				"ajax.googleapis.com",
+				"maps.googleapis.com",
+				"local.kalibrate",
+				"cdnjs.cloudflare",
+				"chart.apis.google.com"
+				]
 		 };
 
 function isValueInList(val, listObj) {
