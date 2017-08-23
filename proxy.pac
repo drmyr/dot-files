@@ -180,8 +180,10 @@ var comNetUrlsToBlock = {
 			"ggpht",
 			"gigya",
 			"globalwebindex",
+			"go",
 			"go-mpulse",
 			"gravatar",
+			"grvcdn",
 			"gtrk.s3.amazonaws",
 			"gumgum",
 			"gwallet",
@@ -445,6 +447,7 @@ var wordsToBlock = {
 				"instream_ad",
 				"log_event",
 				"log_interaction",
+				"optimizely",
 				"mac_204",
 				"metrika",
 				"page_view",
@@ -540,7 +543,7 @@ var bypassList = {
 				"ajax.googleapis.com",
 				"maps.googleapis.com",
 				"local.kalibrate",
-				"cdnjs.cloudflare",
+//				"cdnjs.cloudflare",
 				"chart.apis.google.com"
 				]
 		 };
