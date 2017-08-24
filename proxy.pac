@@ -496,6 +496,7 @@ var nonComNetUrlsToBlock = {
 		"bidr.io",
 		"bildstatic.de",
 		"branch.io",
+		"browser-update.org",
 		"contactimpact.de",
 		"cpx.to",
 		"df-srv.de",
@@ -534,7 +535,8 @@ var nonComNetUrlsToBlock = {
 		"gfx.ms",
 		"onestore.ms",
 		"[^a-z]t.co",
-		"tns-counter.ru"
+		"tns-counter.ru",
+		"vgwort.de"
 ]
 };
 
