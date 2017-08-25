@@ -135,6 +135,7 @@ var comNetUrlsToBlock = {
 			"cse.google",
 			"ctnsnet",
 			"d*.cloudfront",
+			"d1z2jf7jlzjs58.cloudfront",
 			"d26t7ex48mr4bn.cloudfront",
 			"d2q79iu7y748jz.cloudfront",
 			"d31qbv1cthcecs.cloudfront",
