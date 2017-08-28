@@ -10,7 +10,7 @@ alias gs='git status'
 alias gd='git diff'
 alias gc='git checkout'
 alias wth='curl http://wttr.in/cleveland'
-alias ll='ls -al'
+alias ll='ls -alh'
 
 function gacp() {
 	git add .

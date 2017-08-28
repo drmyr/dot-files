@@ -314,6 +314,7 @@ var comNetUrlsToBlock = {
 			"query.yahoo",
 			"questionmarket",
 			"raasnet",
+			"rapidscansecure",
 			"rapleaf",
 			"reson8",
 			"revcontent",
