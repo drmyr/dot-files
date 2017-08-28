@@ -24,7 +24,7 @@ function trim() {
 
 function cbs() {
 	case "$OSTYPE" in 
-	  darwin*)	fuzzy $(pbpaste) . ;;
+	  darwin*)	fuzzy $(pbpaste) ;;
 	  linux*)	fuzzy $(xclip -o) ;;
   	  msys*)	fuzzy $(cat /dev/clipboard) ;;
 	esac
@@ -47,7 +47,10 @@ function kwebs() {
 }
 
 function fuzzy() {
-	egrep -Rni ".*$1.*"
+	case "$OSTYPE" in
+	   darwin*) egrep -Rni ".*$1.*" . ;;
+   	   *)	    egrep -Rni ".*$1.*" ;;	
+	esac
 }
 
 function gsa() {
