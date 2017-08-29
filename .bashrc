@@ -9,6 +9,7 @@ function dots() { cd ~/Git/dot-files; }
 alias gs='git status'
 alias gd='git diff'
 alias gc='git checkout'
+alias grso='git remote show origin'
 alias wth='curl http://wttr.in/cleveland'
 alias ll='ls -alh'
 
