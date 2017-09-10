@@ -455,6 +455,7 @@ var wordsToBlock = {
 				"advertising",
 				"analytics.",
 				"analytics=",
+				"async-ads",
 				"browser-metrics",
 				"beacon",
 				"[^a-z]callback",
