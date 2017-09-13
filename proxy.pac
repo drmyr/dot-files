@@ -493,6 +493,7 @@ var wordsToBlock = {
 				"syndication",
 				"watch_autoplayrenderer",
 				"watch_fragments",
+				"www-tampering",
 				"tracker",
 				"tracking",
 				"videogoodput"
