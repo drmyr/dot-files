@@ -1,5 +1,5 @@
 export PATH=$PATH:/c/Users/meyerd/AppData/Roaming/npm/node_modules/http-server/bin
-
+export PS1="\u@\h\[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\]$ "
 #function emacs() { ~/EmacsApp/bin/emacs.exe $1; } 
 function kui() { cd ~/Git/Kalibrate-UI; }
 function kdb() { cd ~/Git/Kalibrate-Database; }
@@ -12,6 +12,10 @@ alias gc='git checkout'
 alias grso='git remote show origin'
 alias wth='curl http://wttr.in/cleveland'
 alias ll='ls -alh'
+
+function parse_git_branch() {
+	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1]/'
+}
 
 function gacp() {
 	git add .
