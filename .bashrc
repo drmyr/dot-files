@@ -14,8 +14,8 @@ function parse_git_branch() {
 	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1]/'
 }
 
-function gf() {
-	find ~/Git -type d -iname '.git' | sed 's|/.git||' | nl
+function grs() {
+	find ~/Git -type d -iname '.git' | sed 's|/.git||;s|^.*/Git/||' | nl
 	read selection
 	cd $(find ~/Git -type d -iname '.git' | sed 's|/.git||' | awk "NR==$selection")
 }
