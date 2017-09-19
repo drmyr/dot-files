@@ -1,5 +1,5 @@
 export PATH=$PATH:/c/Users/meyerd/AppData/Roaming/npm/node_modules/http-server/bin
-export PS1="\u@\h\[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\]$ "
+export PS1="\u@\h\[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\]\n$ "
 #function emacs() { ~/EmacsApp/bin/emacs.exe $1; } 
 function dots() { cd ~/Git/dot-files; }
 
@@ -16,7 +16,7 @@ function parse_git_branch() {
 
 function grs() {
 	find ~/Git -type d -iname '.git' | sed 's|/.git||;s|^.*/Git/||' | nl
-	read selection
+	read -s selection
 	cd $(find ~/Git -type d -iname '.git' | sed 's|/.git||' | awk "NR==$selection")
 }
 
