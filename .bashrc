@@ -1,14 +1,15 @@
 export PATH=$PATH:/c/Users/meyerd/AppData/Roaming/npm/node_modules/http-server/bin
 export PS1="\u@\h\[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\]\n$ "
-#function emacs() { ~/EmacsApp/bin/emacs.exe $1; } 
-function dots() { cd ~/Git/dot-files; }
-
+#function emacs() { ~/EmacsApp/bin/emacs.exe $1; }
+alias ll='ls -alh'
+function dots() { cd ~/Git/dot-files && ll; }
+function dwn() { cd ~/Downloads && ll; }
+alias sb='source ~/.bashrc'
 alias gs='git status'
 alias gd='git diff'
 alias gc='git checkout'
 alias grso='git remote show origin'
 alias wth='curl http://wttr.in/cleveland'
-alias ll='ls -alh'
 
 function parse_git_branch() {
 	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1]/'
