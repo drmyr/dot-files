@@ -9,6 +9,7 @@ object Bookmarks {
 
   val gitflow = Map(1 -> "https://about.gitlab.com/2014/09/29/gitlab-flow/")
 
-  val bash = Map(1 -> "http://wiki.bash-hackers.org/start")
+  val bash = Map(1 -> "http://wiki.bash-hackers.org/start",
+	  	 2 -> "http://tldp.org/HOWTO/Bash-Prompt-HOWTO/x329.html") //PS1 colors
 
 }
