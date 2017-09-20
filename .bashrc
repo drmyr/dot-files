@@ -1,5 +1,5 @@
 export PATH=$PATH:/c/Users/meyerd/AppData/Roaming/npm/node_modules/http-server/bin
-export PS1="\u@\h\[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\]\n$ "
+export PS1="\[\033[1;37m\]\u@\h\[\033[0;32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\]\n\[\033[01;31m\]$ \[\033[1;32m\]"
 #function emacs() { ~/EmacsApp/bin/emacs.exe $1; }
 alias ll='ls -alh'
 function dots() { cd ~/Git/dot-files && ll; }
