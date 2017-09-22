@@ -270,6 +270,7 @@ var comNetUrlsToBlock = {
 			"mookie1",
 			"mouseflow",
 			"mparticle",
+			"mpeasylink",
 			"msadcenter.msn",
 			"mxptint",
 			"myvisualiq",
