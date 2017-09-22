@@ -494,6 +494,7 @@ var wordsToBlock = {
 				"prebid",
 				"pre-bid",
 				"ptracking",
+				"[^a-z]radar[^a-z]",
 				"recaptcha",
 				"referer=",
 				"referrer=",
@@ -503,6 +504,7 @@ var wordsToBlock = {
 				"watch_autoplayrenderer",
 				"watch_fragments",
 				"www-tampering",
+				"tagging",
 				"tracker",
 				"tracking",
 				"videogoodput"
