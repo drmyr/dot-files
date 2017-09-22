@@ -39,22 +39,6 @@ function cbs() {
 	esac
 }
 
-function kuis() {
-	echo $1
-	currdir=$(pwd)
-	kui && cd ./components
-	fuzzy $1 | sed '/.*\.min.\js/d;/.*\/libs\/angular.*/d'
-	cd $currdir
-}
-
-function kwebs() {
-	echo $1
-	currdir=$(pwd)
-	kweb && cd ./WebApi
-	fuzzy $1 | sed '/.*\.dll/d;/.*\.pdb/d'
-	cd $currdir
-}
-
 function fuzzy() {
 	case "$OSTYPE" in
 	   darwin*) egrep -Rni ".*$1.*" . ;;
