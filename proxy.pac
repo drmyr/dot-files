@@ -486,6 +486,7 @@ var wordsToBlock = {
 				"mac_204",
 				"metrics.",
 				"metrika",
+				"monitorying",
 				"page_view",
 				"pagead",
 				"pageview",
