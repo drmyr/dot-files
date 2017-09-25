@@ -17,4 +17,5 @@ object bm {
   val bash = Map(1 -> "http://wiki.bash-hackers.org/start",
 	  	 2 -> "http://tldp.org/HOWTO/Bash-Prompt-HOWTO/x329.html") //PS1 colors
 
+  val ffox = Map(1 -> "https://www.ghacks.net/overview-firefox-aboutconfig-security-privacy-preferences/") 
 }
