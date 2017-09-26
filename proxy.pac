@@ -490,7 +490,7 @@ var wordsToBlock = {
 				"mac_204",
 				"metrics.",
 				"metrika",
-				"monitorying",
+				"monitoring",
 				"page_view",
 				"pagead",
 				"pageview",
