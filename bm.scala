@@ -1,9 +1,12 @@
 import sys.process._
 
 object bm {
-	val reactiveVids = Map(4 -> "https://www.youtube.com/watch?v=jOvpuVwj8po&index=3&list=PLMhMDErmC1TdBMxd3KnRfYiBV2ELvLyxN",
-					           5 -> "https://www.youtube.com/watch?v=FOYASQx9hrg&list=PLMhMDErmC1TdBMxd3KnRfYiBV2ELvLyxN&index=4",
-					               6 -> "https://www.youtube.com/watch?v=oUr1IQPHa9M&index=5&list=PLMhMDErmC1TdBMxd3KnRfYiBV2ELvLyxN")
+  val reactiveVids = Map(4 -> "https://www.youtube.com/watch?v=jOvpuVwj8po&index=3&list=PLMhMDErmC1TdBMxd3KnRfYiBV2ELvLyxN",
+		5 -> "https://www.youtube.com/watch?v=FOYASQx9hrg&list=PLMhMDErmC1TdBMxd3KnRfYiBV2ELvLyxN&index=4",
+		6 -> "https://www.youtube.com/watch?v=oUr1IQPHa9M&index=5&list=PLMhMDErmC1TdBMxd3KnRfYiBV2ELvLyxN" //monads
+		) 
+
+  val javaReactive = Map(1 -> "http://www.nurkiewicz.com/2016/06/functor-and-monad-examples-in-plain-java.html")
 
   val reactiveArticles = Map(1 -> "http://aaronstacy.com/writings/reactive-programming-and-mvc/")
 
