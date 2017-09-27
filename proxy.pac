@@ -357,6 +357,7 @@ var comNetUrlsToBlock = {
 			"sharethis",
 			"sharethrough",
 			"shinystat",
+			"siftscience",
 			"simplereach",
 			"sitefinder.verisign",
 			"sitemeter",
