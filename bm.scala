@@ -18,4 +18,6 @@ object bm {
 	  	 2 -> "http://tldp.org/HOWTO/Bash-Prompt-HOWTO/x329.html") //PS1 colors
 
   val ffox = Map(1 -> "https://www.ghacks.net/overview-firefox-aboutconfig-security-privacy-preferences/") 
+
+  val docker = Map(1 -> "https://www.youtube.com/watch?v=UV3cw4QLJLs")
 }
