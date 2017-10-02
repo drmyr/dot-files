@@ -469,6 +469,7 @@ var wordsToBlock = {
 				"adexchange",
 				"adfarm",
 				"[^a-z]ads[^a-z]",
+				"ads-by-google",
 				"adsense",
 				"adserver",
 				"ad_radar",
