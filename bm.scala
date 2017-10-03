@@ -22,4 +22,6 @@ object bm {
   val docker = Map(1 -> "https://www.youtube.com/watch?v=UV3cw4QLJLs")
 
   val opencv = Map(1 -> "http://opencv-java-tutorials.readthedocs.io/en/latest/03-first-javafx-application-with-opencv.html")
+
+  val iscala = Map(1 -> "http://jcrudy.github.io/blog/html/2013/12/08/introduction_to_iscala.html")
 }
