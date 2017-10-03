@@ -171,6 +171,8 @@ var comNetUrlsToBlock = {
 			"dpclk",
 			"dpmsrv",
 			"dynamicyield",
+			"edigitalsurvey",
+			"effectivemeasure",
 			"eloqua",
 			"en25",
 			"ensighten",
@@ -301,6 +303,7 @@ var comNetUrlsToBlock = {
 			"nuggad",
 			"olark",
 			"omtrdc",
+			"omniture",
 			"onesignal",
 			"onestatfree",
 			"onscroll",
@@ -629,7 +632,6 @@ var bypassList = {
 				"better.fyi",
 				"ajax.googleapis.com",
 				"maps.googleapis.com",
-				"local.kalibrate",
 //				"cdnjs.cloudflare",
 				"chart.apis.google.com"
 				]
