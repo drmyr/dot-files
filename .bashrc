@@ -18,7 +18,7 @@ function parse_git_branch() {
 
 function grs() {
 	find ~/Git -type d -iname '.git' | sed 's|/.git||;s|^.*/Git/||' | nl
-	read -s selection
+	read selection
 	cd $(find ~/Git -type d -iname '.git' | sed 's|/.git||' | awk "NR==$selection")
 }
 
