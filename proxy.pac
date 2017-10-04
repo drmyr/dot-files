@@ -526,6 +526,7 @@ var wordsToBlock = {
 				"insights.",
 				"insights=",
 				"instream_ad",
+				"leadpages",
 				"log_event",
 				"log_interaction",
 				"omniture",
