@@ -19,7 +19,9 @@ object bm {
 
   val ffox = Map(1 -> "https://www.ghacks.net/overview-firefox-aboutconfig-security-privacy-preferences/") 
 
-  val docker = Map(1 -> "https://www.youtube.com/watch?v=UV3cw4QLJLs")
+  val docker = Map(1 -> "https://www.youtube.com/watch?v=UV3cw4QLJLs",
+		   2 -> "https://www.youtube.com/watch?v=6Er8MAvTWlI",
+		   3 -> "https://www.youtube.com/watch?v=ZcMr4G5DH7c")
 
   val opencv = Map(1 -> "http://opencv-java-tutorials.readthedocs.io/en/latest/03-first-javafx-application-with-opencv.html")
 
