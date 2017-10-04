@@ -510,6 +510,7 @@ var wordsToBlock = {
 				"beacon",
 				"[^a-z]callback",
 				"campaign",
+				"clicktrack",
 				"coremetrics",
 				"countdata",
 				"count-data",
