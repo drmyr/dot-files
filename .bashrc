@@ -3,6 +3,7 @@ export PS1="\[\033[1;37m\]\u@\h\[\033[1;34m\]\w\[\033[1;36m\]\$(parse_git_branch
 #function emacs() { ~/EmacsApp/bin/emacs.exe $1; }
 alias ll='ls -alh'
 function dots() { cd ~/Git/dot-files && ll; }
+function notes() { cd ~/Git/notes && ll; }
 function dwn() { cd ~/Downloads && ll; }
 alias sb='source ~/.bashrc'
 alias gs='git status'
