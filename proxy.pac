@@ -227,11 +227,13 @@ var comNetUrlsToBlock = {
 			"ibpxl",
 			"ibsrv",
 			"images-amazon",
+			"img.webmd",
 			"imrworldwide",
 			"imshopping",
 			"inbenta",
 			"indexww",
 			"informars",
+			"infusionsoft",
 			"innovid",
 			"insightexpressai",
 			"inspectlet",
@@ -263,6 +265,7 @@ var comNetUrlsToBlock = {
 			"lifestreet",
 			"lijit",
 			"lifefyre",
+			"listrakbi",
 			"livechatinc",
 			"liveperson",
 			"liverail",
@@ -344,6 +347,7 @@ var comNetUrlsToBlock = {
 			"pricegrabber",
 			"profile.ams50.cloudfront",
 			"pro-market",
+			"pubexchange",
 			"pubmatic",
 			"pubmine",
 			"pubnation",
@@ -355,6 +359,7 @@ var comNetUrlsToBlock = {
 			"query.yahoo",
 			"questionmarket",
 			"raasnet",
+			"rackcdn",
 			"rapidscansecure",
 			"rapleaf",
 			"rd.about",
@@ -377,6 +382,7 @@ var comNetUrlsToBlock = {
 			"scorecardresearch",
 			"securedvisit",
 			"securemetrics.apple",
+			"selectablemedia",
 			"servedby-buysellads",                
 			"servedbyopenx",
 			"serving-sys",
@@ -391,6 +397,7 @@ var comNetUrlsToBlock = {
 			"sitemeter",
 			"sitescout",
 			"skimresources",
+			"skyword",
 			"sleeknote",
 			"smaato",
 			"smartadserver",
@@ -446,6 +453,7 @@ var comNetUrlsToBlock = {
 			"usabilla",
 			"usemessages",
 			"userecho",
+			"userzoom",
 			"uts-af",
 			"videoamp",
 			"video.google",
@@ -492,6 +500,9 @@ var wordsToBlock = {
 			regexSuffix: "*",
 			list: [
 				"1920x1080",
+				"=1920",
+				"=1080",
+				".woff",
 				"_logs",
 				"ad2",
 				"ad_allowed",
@@ -513,7 +524,7 @@ var wordsToBlock = {
 				"adzone",
 				"[^a-z]analytics[^a-z]",
 				"async-ads",
-				"boomerang*js",
+				"autoptimize",
 				"browser-metrics",
 				"beacon",
 				"[^a-z]callback",
@@ -565,6 +576,7 @@ var wordsToBlock = {
 				"referrer=",
 				"retargeting",
 				"showads",
+				"SidebarAd",
 				"stats",
 				"statistics.",
 				"statistics=",
@@ -576,9 +588,20 @@ var wordsToBlock = {
 				"targeting",
 				"tracker",
 				"tracking",
-				"videogoodput"
+				"videogoodput",
+				"webfont"
 			]
 		   };
+
+var scriptsToBlock = {
+		useHost: true,
+		regexPrefix: "*",
+		regexSuffix: "*js*",
+		list: [
+			"boomerang",
+			"cookie"
+		]	
+};
 
 var nonComNetUrlsToBlock = {
 		useHost: true,
@@ -627,6 +650,7 @@ var nonComNetUrlsToBlock = {
 		"prfct.co",
 		"roq.ad",
 		"rutarget.ru",
+		"sele.co",
 		"simpli.fi",
 		"spot.im",
 		"spotad.co",
@@ -653,7 +677,7 @@ var nonComNetUrlsToBlock = {
 ]
 };
 
-var listsToBlock = [wordsToBlock, comNetUrlsToBlock, nonComNetUrlsToBlock];
+var listsToBlock = [scriptsToBlock, wordsToBlock, comNetUrlsToBlock, nonComNetUrlsToBlock];
 
 var bypassList = {
 			useHost: true,

@@ -31,6 +31,7 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
+     yaml
      elixir
      html
      ;; ----------------------------------------------------------------
@@ -46,6 +47,7 @@ values."
      scala
      java
      javascript
+     ruby
      ;; markdown
      ;; org
      ;; (shell :variables
