@@ -72,6 +72,7 @@ var comNetUrlsToBlock = {
 			"atdmt",
 			"atwola",
 			"auto.search.msn",
+			"aweber",
 			"azureedge",
 			"baidu",
 			"basebanner",
