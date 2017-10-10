@@ -539,6 +539,8 @@ var wordsToBlock = {
 				"eluminate",
 				"eventtrack",
 				"fingerprint",
+				"font-awesome",
+				"fontawesome",
 				"gen_204",
 				"generate_204",
 				"get_midroll_info",
