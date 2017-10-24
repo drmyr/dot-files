@@ -70,6 +70,7 @@ var comNetUrlsToBlock = {
 			"apxlv",
 			"areyouahuman",
 			"assets.pintrest",
+			"autolinkmaker.itunes.apple",
 			"atdmt",
 			"attributionapp",
 			"atwola",
@@ -215,6 +216,7 @@ var comNetUrlsToBlock = {
 			"govdelivery",
 			"gravatar",
 			"grvcdn",
+			"gscontxt",
 			"gtrk.s3.amazonaws",
 			"gumgum",
 			"gwallet",
@@ -543,7 +545,8 @@ var wordsToBlock = {
 				"autoptimize",
 				"browser-metrics",
 				"beacon",
-				"[^a-z]callback",
+				"&callback",
+				"callback=",
 				"campaign",
 				"choptimize",
 				"clicktrack",
@@ -611,6 +614,7 @@ var wordsToBlock = {
 				"targeting",
 				"tracker",
 				"tracking",
+				"Tracking",
 				"videogoodput",
 				"webfont"
 			]
@@ -622,7 +626,9 @@ var scriptsToBlock = {
 		regexSuffix: "*js*",
 		list: [
 			"boomerang",
+			"callback",
 			"cookie"
+//			"vendor"
 		]	
 };
 
