@@ -20,6 +20,16 @@ function atompacs() {
 	apm list --installed --pure
 }
 
+function getclip {
+	xclip -selection c -o
+}
+
+function uNgTwoCli() {
+	sudo npm uninstall -g angular-cli
+	sudo npm cache clean
+	sudo npm install -g @angular/cli@latest
+}
+
 function grs() {
 	find ~/Git -type d -iname '.git' | sed 's|/.git||;s|^.*/Git/||' | nl
 	read selection
