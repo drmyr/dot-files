@@ -16,6 +16,10 @@ function parse_git_branch() {
 	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1]/'
 }
 
+function atompacs() {
+	apm list --installed --pure
+}
+
 function grs() {
 	find ~/Git -type d -iname '.git' | sed 's|/.git||;s|^.*/Git/||' | nl
 	read selection
