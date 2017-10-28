@@ -49,7 +49,7 @@ function trim() {
 function cbs() {
 	case "$OSTYPE" in 
 	  darwin*)	fuzzy $(pbpaste) ;;
-	  linux*)	fuzzy $(xclip -o) ;;
+	  linux*)	fuzzy $(getclip) ;;
   	  msys*)	fuzzy $(cat /dev/clipboard) ;;
 	esac
 }
