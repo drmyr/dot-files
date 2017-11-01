@@ -26,4 +26,6 @@ object bm {
   val opencv = Map(1 -> "http://opencv-java-tutorials.readthedocs.io/en/latest/03-first-javafx-application-with-opencv.html")
 
   val iscala = Map(1 -> "http://jcrudy.github.io/blog/html/2013/12/08/introduction_to_iscala.html")
+
+  val ffox = Map(1 -> "https://gist.github.com/haasn/69e19fc2fe0e25f3cff5")
 }
