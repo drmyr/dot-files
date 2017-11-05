@@ -286,6 +286,7 @@ var comNetUrlsToBlock = {
 			"m.lifehack",
 			"marketo",
 			"mathtag",
+			"maxmind",
 			"maxymiser",
 			"mdotlabs",
 			"mdotm",
