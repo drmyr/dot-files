@@ -28,4 +28,7 @@ object bm {
   val iscala = Map(1 -> "http://jcrudy.github.io/blog/html/2013/12/08/introduction_to_iscala.html")
 
   val ffox = Map(1 -> "https://gist.github.com/haasn/69e19fc2fe0e25f3cff5")
+
+  val git = Map(1 -> "gitolite.com/gcs.html",
+                2 -> "https://jwiegley.github.io/git-from-the-bottom-up/")
 }
