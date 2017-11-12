@@ -21,7 +21,7 @@ let hostList = [
 			/afy11/,
 			/agkn/,
 			/air/,
-			/akamaihd/,
+			/akamai(hd)?/,
 			/akstat/,
 			/alcmpn/,
 			/alooma/,
@@ -31,7 +31,7 @@ let hostList = [
 			/ampproject/,
 			/analytics.*(apple|msn|msnbc|twitter|yahoo|google|microsoft)/,
 			/answerscloud/,
-			/app(dynamics|ier)?/,
+			/app(dynamics|ier)/,
 			/apxlv/,
 			/areyouahuman/,
 			/atdmt/,
@@ -126,7 +126,6 @@ let hostList = [
 			/d5nxst8fruw4z.cloudfront/,
 			/d8rk54i4mohrb.cloudfront/,
 			/daddyanalytics/,
-			/d.*cloudfront/,
 			/decenthat/,
 			/demandbase/,
 			/demdex/,
@@ -199,7 +198,7 @@ let hostList = [
 			/go[-_]?mpulse/,
 			/googlead(services|syndication)/,
 			/google[-_]?analytics/,
-			/google(apis|code|commerce|syndication)/,
+			/google(apis|code|commerce|syndication|user)/,
 			/googletag(manager|services)/,
 			/goroost/,
 			/govdelivery/,
@@ -209,6 +208,7 @@ let hostList = [
 			/gtrk.s3.amazonaws/,
 			/gumgum/,
 			/gwallet/,
+			/h[-_]?bid/,
 			/haleymarketing/,
 			/heatmap/,
 			/hellobar/,
@@ -338,6 +338,7 @@ let hostList = [
 			/perfectmarket/,
 			/petametrics/,
 			/assets.pintrest/,
+			/ping(dom)?/,
 			/pippio/,
 			/pixel/,
       			/placemytag/,
@@ -346,7 +347,8 @@ let hostList = [
 			/platform.twitter/,
 			/playbuzz/,
 			/plista/,
-			/\.po/,
+			/\.po\./,
+			/ads.pof/,
 			/polarmobile/,
 			/postaffiliatepro/,
 			/postrelease/,
@@ -355,7 +357,7 @@ let hostList = [
 			/pricegrabber/,
 			/profile.ams50.cloudfront/,
 			/pro[-_]?market/,
-			/pub(exchange|matic|mine|nation)?/,
+			/pub(exchange|matic|mine|nation)/,
 			/push(crew|engage)?/,
 			/qualtrics/,
 			/quant(count|server?)/,
@@ -364,6 +366,7 @@ let hostList = [
 			/rackcdn/,
 			/rapidscansecure/,
 			/rapleaf/,
+			/raygun/,
 			/rd.about/,
 			/realvu/,
 			/recruitics/,
@@ -409,12 +412,14 @@ let hostList = [
 			/smart(adserver|clip)/,
 			/sonobi/,
 			/sovrn/,
+			/speedcurve/,
 			/spongecell/,
 			/spot(ad|e?xchange)/,
 			/springserve/,
 			/sprinkletxt/,
-			/stats?(counter|event)?/,
-			/static(stuff|world)?/,
+			/stackcommerce/,
+			/stats?(counter|event)/,
+			/static(stuff|world)/,
 			/statuspage/,
 			/summerhamster/,
 			/sumo(me)?/,
@@ -499,15 +504,17 @@ let hostList = [
 			/zqtk/
 ];
 
-let urlList = [
+let pathList = [
 				/1920x1080/i,
-				/=1920/i,
-				/=1080/i,
+				/=1920[^0-9]+/i,
+				/=1080[^0-9]+/i,
 				/\.woff/i,
 				/[-_]?logs/i,
+				/\bads\b/i,
 /ads?[-_]?(2|block|allowed|channel|exchange|farm|fuel|request|sprite|sense|server|radar|type|units?|vagg|vertisement|vertising|zone)/i,
 				/(async|instream|page|pub|show|sidebar)[-_]?ads?/i,
 				/ads[-_]?by[-_]?google/i,
+				/advert/i,
 				/analytics/i,
 				/autoptimize/i,
 				/boomerang/i,
@@ -517,6 +524,7 @@ let urlList = [
 				/callback/i,
 				/campaign/i,
 				/cardlytics/i,
+				/cedexis/i,
 				/choptimize/i,
 				/clicktrack/i,
 				/cookie/i,
@@ -524,6 +532,7 @@ let urlList = [
 				/count[-_]?data/i,
 				/csi[-_]?204/i,
 				/double.*ssl/i,
+				/dynatrace/i,
 				/eluminate/i,
 				/embeds/i,
 				/eventtrack/i,
@@ -537,15 +546,17 @@ let urlList = [
 				/impression/i,
 				/infocookie/i,
 				/insights/i,
-				/waypoints/i,
-				/leadpages/i,
+				/waypoints?/i,
+				/leadpages?/i,
 				/log[-_]?(event|interaction)/i,
 				/omniture/i,
 				/optimizely/i,
 				/mac[-_]?204/i,
 				/metrics/i,
 				/metrika/i,
-				/monitoring/i,
+				/modernizr/i,
+				/monitors?(ing)/i,
+				/mpulse/i,
 				/nexusclient/i,
 				/outbrain/i,
 				/page[-_]?(view|timings?)/i,
@@ -558,6 +569,7 @@ let urlList = [
 				/recaptcha/i,
 				/referr?er/i,
 				/retargeting/i,
+				/(b|dc|wp)rum/i,
 				/stats/i,
 				/statistics/i,
 				/syndication/i,
@@ -572,9 +584,14 @@ let urlList = [
 
 ];
 
-let whiteList = [
-	
+let siteWhiteList = [
+	/wikipedia/
 ];
+
+let pathWhiteList = [
+	/jquery\.(min\.)?js$/
+];
+
 
 function matchTest(site, list) {
 	for(let i in list) {
@@ -587,13 +604,17 @@ function matchTest(site, list) {
 }
 
 function FindProxyForURL(url, host) {
-//	if(matchTest(host, whiteList)) { return "DIRECT"; }
-
 	let path = url.replace(/https?:\/\//, '').replace(host, '');
-	if(matchTest(host, hostList) || matchTest(path, urlList)) {
+
+	if(matchTest(host, siteWhiteList) || matchTest(path, pathWhiteList)) { return "DIRECT"; }
+
+	if(matchTest(host, hostList) || matchTest(path, pathList)) {
 		alert("BLOCKED: " + url.toString());
 		return "PROXY 127.0.0.1:0000";
 	}
+
+	alert("DIRECT: " + url.toString());
+
 	return "DIRECT";
 }
 
