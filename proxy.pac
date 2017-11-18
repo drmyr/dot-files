@@ -145,8 +145,7 @@ let hostList = [
 			/dnn506yrbagrg.cloudfront/,
 			/domdex/,
 			/do[-_]?not[-_]?tracker?/,
-			/double[-_]?click/,
-			/doubleclickbygoogle/,
+			/double[-_]?click(bygoogle)?/,
 			/doubleverify/,
 			/dp8hsntg6do36.cloudfront/,
 			/dpclk/,
@@ -280,7 +279,7 @@ let hostList = [
 			/maxymiser/,
 			/mdotlabs/,
 			/mdotm/,
-			/media(voice|wallahscript|6degrees)?/,
+			/media(voice|wallahscript|6degrees)/,
 			/media.business.spectrum/,
 			/mentad/,
 			/telemetry.microsoft/,
@@ -589,6 +588,7 @@ let siteWhiteList = [
 ];
 
 let pathWhiteList = [
+	/\.css$/,
 	/jquery\.(min\.)?js$/
 ];
 
