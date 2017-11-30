@@ -359,7 +359,7 @@ let hostList = [
 			/profile.ams50.cloudfront/,
 			/pro[-_]?market/,
 			/pub(exchange|matic|mine|nation)/,
-			/push(crew|engage)?/,
+			/push(crew|engage)/,
 			/qualtrics/,
 			/quant(count|server?)/,
 			/questionmarket/,

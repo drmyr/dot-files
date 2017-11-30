@@ -36,6 +36,10 @@ function grs() {
 	cd $(find ~/Git -type d -iname '.git' | sed 's|/.git||' | awk "NR==$selection")
 }
 
+function gittrackedfiles() {
+	git ls-tree -r $(git branch | sed 's/..//') --name-only
+}
+
 function gacp() {
 	git add .
 	git commit -m "$1"
