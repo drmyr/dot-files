@@ -36,8 +36,8 @@ function grs() {
 	cd $(find ~/Git -type d -iname '.git' | sed 's|/.git||' | awk "NR==$selection")
 }
 
-function gittrackedfiles() {
-	git ls-tree -r $(git branch | sed 's/..//') --name-only
+function gtf() {
+	git ls-tree -r $(git branch | grep \* | sed 's/..//') --name-only
 }
 
 function gacp() {

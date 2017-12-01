@@ -586,6 +586,7 @@ let pathList = [
 				/tagging/i,
 				/targeting/i,
 				/timings/i,
+				/trackclick/i,
 				/track(ers?|ing)/i,
 				/videogoodput/i,
 				/webfont/i
