@@ -10,6 +10,8 @@ alias gs='git status'
 alias gd='git diff'
 alias gc='git checkout'
 alias grso='git remote show origin'
+alias gls='git ls-files'
+alias glog='git log --all --oneline --graph --decorate'
 alias wth='curl http://wttr.in/cleveland'
 
 function parse_git_branch() {
@@ -21,7 +23,10 @@ function atompacs() {
 }
 
 function getclip {
-	xclip -selection c -o
+	case "$OSTYPE" in 
+	  linux*)  xclip -selection c -o ;;
+	  msys*)   cat /dev/clipboard ;;
+	esac
 }
 
 function uNgTwoCli() {
@@ -34,10 +39,6 @@ function grs() {
 	find ~/Git -type d -iname '.git' | sed 's|/.git||;s|^.*/Git/||' | nl
 	read selection
 	cd $(find ~/Git -type d -iname '.git' | sed 's|/.git||' | awk "NR==$selection")
-}
-
-function gtf() {
-	git ls-tree -r $(git branch | grep \* | sed 's/..//') --name-only
 }
 
 function gacp() {
