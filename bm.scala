@@ -30,5 +30,6 @@ object bm {
   val ffox = Map(1 -> "https://gist.github.com/haasn/69e19fc2fe0e25f3cff5")
 
   val git = Map(1 -> "gitolite.com/gcs.html",
-                2 -> "https://jwiegley.github.io/git-from-the-bottom-up/")
+                2 -> "https://jwiegley.github.io/git-from-the-bottom-up/",
+                3 -> "http://drewfradette.ca/a-simpler-successful-git-branching-model/")
 }
