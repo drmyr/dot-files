@@ -480,7 +480,7 @@ let hostList = [
 			/viglink/,
 			/vindicosuite/,
 			/visiblemeasures/,
-			/visual(dna|revenue|websiteoptimizer)?/,
+			/visual(dna|revenue|websiteoptimizer)/,
 			/vmweb/,
 			/voicefive/,
 			/volvelle/,

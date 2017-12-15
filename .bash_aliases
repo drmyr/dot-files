@@ -42,9 +42,7 @@ function grs() {
 }
 
 function gacp() {
-	git add .
-	git commit -m "$1"
-	git push
+	git commit -am "$1" && 	git push
 }
 
 function trim() {
@@ -85,4 +83,8 @@ function gitlooper() {
 		echo "------------------------------------------"
 	done
 	cd $currdir
+}
+
+function getJvmDefaults() {
+	java -XX:+PrintCommandLineFlags
 }
