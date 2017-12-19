@@ -89,7 +89,6 @@ let hostList = [
 			/click2sell/,
 			/clickagy/,
 			/clksite/,
-			/cloudflare/,
 			/clrstm/,
 			/cnevids/,
 			/cnzz/,
@@ -346,7 +345,7 @@ let hostList = [
 			/perimeterx/,
 			/petametrics/,
 			/assets.pintrest/,
-			/[^(?:va)]ping(dom)?/,
+			/[^(?:shop|va)]ping(dom)?/,
 			/pippio/,
 			/pixel/,
       			/placemytag/,
@@ -542,7 +541,7 @@ let pathList = [
 				/cedexis/i,
 				/choptimize/i,
 				/clicktrack/i,
-				/cookie.*js/i,
+				/(info)?cookie.*js/i,
 				/coremetrics/i,
 				/count[-_]?data/i,
 				/csi[-_]?204/i,
@@ -607,6 +606,10 @@ let pathList = [
 
 ];
 
+let fullUrlWhiteList = [
+	/https:\/\/stackoverflow\.com\/questions\/\d+\//
+];
+
 let siteWhiteList = [
 	/wikipedia/
 ];
@@ -628,6 +631,8 @@ function matchTest(site, list) {
 }
 
 function FindProxyForURL(url, host) {
+	if(matchTest(url, fullUrlWhiteList)) { return "DIRECT"; }
+
 	let path = url.replace(/https?:\/\//, '').replace(host, '');
 
 	if(matchTest(host, siteWhiteList) || matchTest(path, pathWhiteList)) { return "DIRECT"; }
