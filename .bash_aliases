@@ -1,5 +1,6 @@
 export PATH=$PATH:/c/Users/meyerd/AppData/Roaming/npm/node_modules/http-server/bin
 export PS1="\[\033[1;37m\]\u@\h\[\033[1;34m\]\w\[\033[1;36m\]\$(parse_git_branch)\[\033[1;33m\]\n\[\033[1;31m\]$ \[\033[1;32m\]"
+export HISTTIMEFORMAT="%d/%m/%y %T "
 #function emacs() { ~/EmacsApp/bin/emacs.exe $1; }
 alias ll='ls -alh'
 function dots() { cd ~/Git/dot-files && ll; }
@@ -11,7 +12,7 @@ alias gd='git diff'
 alias gc='git checkout'
 alias grso='git remote show origin'
 alias gls='git ls-files'
-alias glog='git log --all --oneline --graph --decorate'
+alias glog='git log --all --oneline --graph --decorate --abbrev-commit --color'
 alias wth='curl http://wttr.in/cleveland'
 
 function parse_git_branch() {
