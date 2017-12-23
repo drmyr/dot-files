@@ -184,6 +184,7 @@ let hostList = [
 			/fullstory/,
 			/future[-_]?hawk[-_]?content/,
 			/fwmrm/,
+			/(s|g|a)fx/,
 			/fyre/,
 			/gannett[-_]?cdn/,
 			/gemius/,
