@@ -1,4 +1,3 @@
-export PATH=$PATH:/c/Users/meyerd/AppData/Roaming/npm/node_modules/http-server/bin
 export PS1="\[\033[1;37m\]\u@\h\[\033[1;34m\]\w\[\033[1;36m\]\$(parse_git_branch)\[\033[1;33m\]\n\[\033[1;31m\]$ \[\033[1;32m\]"
 export HISTTIMEFORMAT="%d/%m/%y %T "
 #function emacs() { ~/EmacsApp/bin/emacs.exe $1; }
@@ -37,9 +36,12 @@ function uNgTwoCli() {
 }
 
 function grs() {
-	find ~/Git -type d -iname '.git' | sed 's|/.git||;s|^.*/Git/||' | nl
-	read selection
-	cd $(find ~/Git -type d -iname '.git' | sed 's|/.git||' | awk "NR==$selection")
+	repos=( $(ls -d ~/Git/*) )
+	for i in "${!repos[@]}"; do
+		echo "$i...$(basename ${repos[$i]})"
+	done
+	echo -n "Selection: " && read selection
+	cd ${repos[$selection]}
 }
 
 function gacp() {
@@ -74,16 +76,8 @@ function fetchall() {
 }
 
 function gitlooper() {
-	currdir=$(pwd)
-	cd ~/Git && dirs=( $(ls) )
-	for i in "${dirs[@]}"
-	do
-		echo ~/Git/"$i"
-		cd ~/Git/"$i"
-		$1
-		echo "------------------------------------------"
-	done
-	cd $currdir
+	find ~/Git/* -maxdepth 0 -type d -exec sh -c \
+	     "(echo {} && cd {} && $1 && echo '-----------------------------------------')" \;
 }
 
 function getJvmDefaults() {
