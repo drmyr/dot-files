@@ -1,4 +1,4 @@
-let hostList = [
+let hostBlockList = [
 			/1rx/,
 			/2checkout/,
 			/2mdn/,
@@ -519,7 +519,7 @@ let hostList = [
 			/zqtk/
 ];
 
-let pathList = [
+let pathBlockList = [
 				/1920x1080/i,
 				/=1920[^0-9]+/i,
 				/=1080[^0-9]+/i,
@@ -608,10 +608,11 @@ let pathList = [
 ];
 
 let fullUrlWhiteList = [
-	/https:\/\/stackoverflow\.com\/questions\/\d+\//
+	/https:\/\/stackoverflow\.com\/questions\/\d+\//,
+	/https:\/\/\w{2,3}-{3}\w{2}-\w{8}\.googlevideo\.com\/videoplayback/
 ];
 
-let siteWhiteList = [
+let hostWhiteList = [
 	/wikipedia/
 ];
 
@@ -631,20 +632,26 @@ function matchTest(site, list) {
 	return false;
 }
 
-function FindProxyForURL(url, host) {
-	if(matchTest(url, fullUrlWhiteList)) { return "DIRECT"; }
+function dnsDirect(url) {
+	alert("DIRECT: " + url.toString());
+	return "DIRECT";
+}
 
+function FindProxyForURL(url, host) {
 	let path = url.replace(/https?:\/\//, '').replace(host, '');
 
-	if(matchTest(host, siteWhiteList) || matchTest(path, pathWhiteList)) { return "DIRECT"; }
+	if(matchTest(url, fullUrlWhiteList) || 
+	   matchTest(host, hostWhiteList)   || 
+	   matchTest(path, pathWhiteList))  { 
+		return dnsDirect(url);
+	}
 
-	if(matchTest(host, hostList) || matchTest(path, pathList)) {
+	if(matchTest(host, hostBlockList)  || 
+	   matchTest(path, pathBlockList)) {
 		alert("BLOCKED: " + url.toString());
 		return "PROXY 127.0.0.1:0000";
 	}
-
-	alert("DIRECT: " + url.toString());
-
-	return "DIRECT";
+	
+	return dnsDirect(url);
 }
 

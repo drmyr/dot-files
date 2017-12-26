@@ -1,6 +1,5 @@
 export PS1="\[\033[1;37m\]\u@\h\[\033[1;34m\]\w\[\033[1;36m\]\$(parse_git_branch)\[\033[1;33m\]\n\[\033[1;31m\]$ \[\033[1;32m\]"
 export HISTTIMEFORMAT="%d/%m/%y %T "
-#function emacs() { ~/EmacsApp/bin/emacs.exe $1; }
 alias ll='ls -alh'
 function dots() { cd ~/Git/dot-files && ll; }
 function notes() { cd ~/Git/notes && ll; }
