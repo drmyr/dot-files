@@ -30,7 +30,7 @@ function getclip {
 
 function uNgTwoCli() {
 	sudo npm uninstall -g angular-cli
-	sudo npm cache clean
+	sudo npm cache verify
 	sudo npm install -g @angular/cli@latest
 }
 

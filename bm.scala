@@ -6,7 +6,8 @@ object bm {
 		6 -> "https://www.youtube.com/watch?v=oUr1IQPHa9M&index=5&list=PLMhMDErmC1TdBMxd3KnRfYiBV2ELvLyxN" //monads
 		) 
 
-  val javaReactive = Map(1 -> "http://www.nurkiewicz.com/2016/06/functor-and-monad-examples-in-plain-java.html")
+  val javaReactive = Map(1 -> "http://www.nurkiewicz.com/2016/06/functor-and-monad-examples-in-plain-java.html",
+                        2 -> "https://www.youtube.com/watch?v=JjrAmhlTjug")
 
   val reactiveArticles = Map(1 -> "http://aaronstacy.com/writings/reactive-programming-and-mvc/")
 
