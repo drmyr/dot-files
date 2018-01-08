@@ -191,6 +191,7 @@ let hostBlockList = [
 			/gemius/,
 			/geni/,
 			/geovisite/,
+			/getdrip/,
 			/gff6166tdt2i4fc155zi11/,
 			/gfx/,
 			/ggpht/,
@@ -492,6 +493,7 @@ let hostBlockList = [
 			/w55c/,
 			/webfont/,
 			/weborama/,
+			/webtrends/,
 			/wishabi/,
 			/workey/,
 			/wraug5vv72b28fch/,
@@ -525,9 +527,9 @@ let pathBlockList = [
 				/=1920[^0-9]+/i,
 				/=1080[^0-9]+/i,
 				/\.woff/i,
-				/[^b][-_]?logs/i,
+				/[^(?:cata|b)]][-_]?logs/i,
 				/\bads\b/i,
-/ads?[-_]?(2|block|allowed|channel|exchange|farm|fuel|net|request|sprite|sense|server|radar|type|units?|url|vagg|vertisement|vertising|zone)/i,
+/[^(?:downlo)]ads?[-_]?(2|block|allowed|channel|exchange|farm|fuel|net|request|sprite|sense|server|radar|type|units?|url|vagg|vertisement|vertising|zone)/i,
 				/(async|instream|page|pub|show|sidebar)[-_]?ads?/i,
 				/ads[-_]?by[-_]?google/i,
 				/advert/i,
@@ -604,7 +606,8 @@ let pathBlockList = [
 				/trackclick/i,
 				/track(ers?|ing)?.*js/i,
 				/videogoodput/i,
-				/webfont/i
+				/webfont/i,
+				/webtrends/i
 
 ];
 
