@@ -536,7 +536,7 @@ let pathBlockList = [
 				/\.woff/i,
 				/[^(?:cata|b)]][-_]?logs/i,
 				/\bads\b/i,
-/[^(?:downlo|he)]ads?[-_]?(2|block|allowed|channel|exchange|farm|fuel|net|request|sprite|sense|server|radar|type|units?|url|vagg|vertisement|vertising|zone)/i,
+/[^(?:downlo|he)]ads?[-_]?(2|block|allowed|channel|exchange|farm|fuel|net|request|sprite|sense|server|service|radar|type|units?|url|vagg|vertisement|vertising|zone)/i,
 				/(async|instream|page|pub|show|sidebar)[-_]?ads?/i,
 				/ads[-_]?by[-_]?google/i,
 				/advert/i,
