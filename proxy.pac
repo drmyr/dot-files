@@ -582,6 +582,7 @@ let pathBlockList = [
 				/get[-_]?video[-_]?info/i,
 				/get[-_]?video[-_]?metadata/i,
 				/googleads/i,
+				/hiddenframe/i,
 				/impression/i,
 				/infocookie/i,
 				/insights/i,
