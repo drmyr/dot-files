@@ -222,6 +222,7 @@ let hostBlockList = [
 			/gwallet/,
 			/h[-_]?bid/,
 			/haleymarketing/,
+			/heapanalytics/,
 			/heatmap/,
 			/hellobar/,
 			/hfc195b/,
@@ -544,7 +545,7 @@ let pathBlockList = [
 				/=1920[^0-9]+/i,
 				/=1080[^0-9]+/i,
 				/\.woff/i,
-				/[^(?:cata|b)]][-_]?logs/i,
+				/[^(?:cata|b)][-_]?logs/i,
 				/\bads\b/i,
 /[^(?:downlo|he)]ads?[-_]?(2|block|allowed|channel|exchange|farm|fuel|net|request|sprite|sense|server?|service|radar|type|units?|url|vagg|vertisement|vertising|zone)/i,
 				/(async|instream|page|pub|show|sidebar)[-_]?ads?/i,
@@ -576,6 +577,7 @@ let pathBlockList = [
 				/facebook/i,
 				/fingerprint/i,
 				/font[-_]?awesome/i,
+				/foresee/i,
 				/gen(erate)?[-_]?204/i,
 				/getcustom(er)?offers/i,
 				/get[-_]?midroll[-_]?info/i,
@@ -638,7 +640,7 @@ let pathBlockList = [
 ];
 
 let fullUrlWhiteList = [
-	/https:\/\/stackoverflow\.com\/questions\/\d+\//,
+	/https:\/\/[a-z]*\.?stack(exchange|overflow)\.com\/questions\/\d+\//,
 	/https:\/\/\w{2,3}-{3}\w{2}-\w{8}\.googlevideo\.com\/videoplayback/
 ];
 
