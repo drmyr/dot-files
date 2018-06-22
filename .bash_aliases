@@ -82,3 +82,15 @@ function gitlooper() {
 function getJvmDefaults() {
 	java -XX:+PrintCommandLineFlags
 }
+
+function makeKeystore() {
+	#https://gist.github.com/Eng-Fouad/6cdc8263068700ade87e4e3bf459a988
+	keytool -genkeypair -keystore tempstore.p12 -storetype PKCS12 \
+		-storepass $1 -alias selfsigned -keyalg RSA -keysize 2048 \
+		-validity 999
+}
+
+function getPublicCert() {
+	keytool -exportcert -keystore tempstore.p12 -storepass $1 \
+		-alias selfsigned -rfc -file pub-cert.pem
+}

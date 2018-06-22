@@ -299,6 +299,7 @@ let hostBlockList = [
 			/llnwd/,
 			/lnk/,
 			/localytics/,
+			/logger\.[a-z0-9]+\.[a-z0-9]+/,
 			/lpsnmedia/,
 			/lrcdn/,
 			/m2/,
@@ -499,7 +500,7 @@ let hostBlockList = [
 			/troncdata/,
 			/tru(optik|ste\.)/,
 			/tubemogul/,
-			/[^(?:zero)]turn/,
+			/[^(?:zero)]turn[^(?:er)]/,
 			/twimg/,
 			/tynt/,
 			/typekit/,
@@ -563,7 +564,7 @@ let pathBlockList = [
 				/1920x1080/i,
 				/=1920[^0-9]+/i,
 				/=1080[^0-9]+/i,
-				/\.woff/i,
+	//			/\.woff/i,
 				/[^(?:cata|b|jenkins)][-_]?logs[^(?:.html)]/i,
 	//			/\bads\b/i,
 /[^(?:downlo|he|ldap)]ads?[-_]?(2|block|allowed|channel|exchange|farm|fuel|net|request|sprite|sense|server?|service|radar|type|units?|url|vagg|vertisement|vertising|zone)/i,
@@ -629,7 +630,7 @@ let pathBlockList = [
 				/nexusclient/i,
 				/outbrain/i,
 				/page[-_]?(ad|view|timings?)/i,
-				/[^(?:shop|va)]ping/i,
+				/[^(?:shop|va|swee)]ping/i,
 				/pixel/i,
 				/player[-_]?204/i,
 				/pre[-_]?(bid|populator)/i,
@@ -675,6 +676,7 @@ let fullUrlWhiteList = [
 ];
 
 let hostWhiteList = [
+	/localhost/,
 	/wikipedia/
 ];
 
