@@ -113,6 +113,7 @@ let hostBlockList = [
 			/connexity/,
 			/consumertrack/,
 			/contactimpact/,
+			/content[-_]?ad/,
 			/context(ly|web)/,
 			/convergetrack/,
 			/conversionlogic/,
@@ -359,7 +360,7 @@ let hostBlockList = [
 			/olark/,
 			/omniture/,
 			/omtrdc/,
-			/one(signal|statfree|store|trust)/,
+			/one(signal|statfree|store|tag|trust)/,
 			/onscroll/,
 			/ooyala/,
 			/opendsp/,
@@ -441,6 +442,7 @@ let hostBlockList = [
 			/searchlinks/,
 			/securedvisit/,
 			/securemetrics.apple/,
+			/sekindo/,
 			/sele/,
 			/selectablemedia/,
 			/sentry/,
@@ -474,6 +476,7 @@ let hostBlockList = [
 			/static(stuff|world)/,
 			/statuspage/,
 			/steelhousemedia/,
+			/suggestv/,
 			/summerhamster/,
 			/sumo(me)?/,
 			/sundaysky/,
@@ -606,6 +609,7 @@ let pathBlockList = [
 				/count[-_]?data/i,
 				/csi[-_]?204/i,
 				/double.*ssl/i,
+				/dtag/,
 				/dynatracemonitor/i,
 				/eluminate/i,
 				/embeds/i,
@@ -668,6 +672,7 @@ let pathBlockList = [
 				/watch[-_]?(autoplayrenderer|fragments)/i,
 				/web[-_]?(track(er)?|trk)/i,
 				/woocommerce/i,
+				/wwuads/i,
 				/(www[-_]?)?tampering/i,
 				/tagging/i,
 				/targeting/i,
@@ -695,7 +700,8 @@ let hostWhiteList = [
 
 let pathWhiteList = [
 	/\.css$/,
-	/jquery\.(min\.)?js$/
+	/jquery\.(min\.)?js$/,
+	/\.png$/
 ];
 
 
