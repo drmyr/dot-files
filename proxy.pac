@@ -122,6 +122,7 @@ let hostBlockList = [
 			/cookie[-_]?(law|script)/,
 			/coresecure/,
 			/cpx/,
+			/cquotient/,
 			/crazyegg/,
 			/creditcards/,
 			/crispadvertising/,
@@ -199,7 +200,7 @@ let hostBlockList = [
 			/fonecta/,
 			/fonts/,
 			/footprint/,
-			/[^(?:work|sales)]for(ce|esee)/,
+			/[^(?:m|work|sales)]for(ce|esee)/,
 			/formalyzer/,
 			/fqtag/,
 			/fuelx/,
@@ -701,7 +702,7 @@ let hostWhiteList = [
 let pathWhiteList = [
 	/\.css$/,
 	/jquery\.(min\.)?js$/,
-	/\.png$/
+	/.*[^(?:1x1|track|beacon)]\.png$/
 ];
 
 
