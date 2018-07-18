@@ -28,6 +28,10 @@ function getclip {
 	esac
 }
 
+function cdapp() {
+	cd $(dirname $(readlink -f $(which $1)))
+}
+
 function uNgTwoCli() {
 	sudo npm uninstall -g angular-cli
 	sudo npm cache verify
