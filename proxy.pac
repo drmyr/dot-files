@@ -678,6 +678,7 @@ let pathBlockList = [
 				/seotag/i,
 				/service[-_]?ajax/i,
 				/sharecounts/i,
+				/shim\.gif/i,
 				/spf/i,
 				/stats/i,
 				/statistics/i,
