@@ -137,7 +137,7 @@ let hostBlockList = [
 			/crsspxl/,
 			/crwdcntrl/,
 			/csdata1/,
-			/(csi|fonts|metrics?).gstatic/,
+			/(csi|encrypted.*|fonts|metrics?).gstatic/,
 			/ctnsnet/,
 			/d1z2jf7jlzjs58.cloudfront/,
 			/d26t7ex48mr4bn.cloudfront/,
@@ -631,6 +631,7 @@ let pathBlockList = [
 				/cardlytics/i,
 				/cedexis/i,
 				/choptimize/i,
+				/click\.gif/i,
 				/clicktrack/i,
 				/clientt?race/i,
 				/(info)?cookie.*js/i,
@@ -726,7 +727,7 @@ let pathBlockList = [
 
 let fullUrlWhiteList = [
 	/https:\/\/[a-z]*\.?stack(exchange|overflow)\.com\/questions\/\d+\//,
-	/https:\/\/\w{2,3}-{3}\w{2}-\w{8}\.googlevideo\.com\/videoplayback/
+	/https:\/\/\w{2,3}-{3}\w{2}-\w{8}\.googlevideo\.com\/(videoplayback|generate_204)/
 ];
 
 let hostWhiteList = [
@@ -737,42 +738,34 @@ let hostWhiteList = [
 let pathWhiteList = [
 	/\.css$/,
 	/jquery\.(min\.)?js$/,
-	/.*[^(?:1x1|track|beacon)]\.png$/
+	/.*[^(?:1x1|track|beacon|click|blank|clear|shim)]\.png$/
 ];
 
 
-function matchTest(site, list) {
+function matchTest(site, list, msg, url) {
 	for(let i in list) {
 		if(list[i].test(site)) {
-			alert("TRIGGER: " + list[i].toString());
+			alert(msg + ": " + url + " -> TRIGGER: " + list[i].toString());
 			return true;
 		}
 	}
 	return false;
 }
 
-function dnsDirect(url) {
-	alert("DIRECT: " + url.toString());
-	return "DIRECT";
-}
-
 function FindProxyForURL(url, host) {
 	let path = url.replace(/https?:\/\//, '').replace(host, '');
-	alert("HOST: " + host);
-	alert("URL: " + url);
 
-	if(matchTest(url, fullUrlWhiteList) || 
-	   matchTest(host, hostWhiteList)   || 
-	   matchTest(path, pathWhiteList))  { 
-		return dnsDirect(url);
+	if(matchTest(url, fullUrlWhiteList, "DIRECT", url) || 
+	   matchTest(host, hostWhiteList, "DIRECT", url)   || 
+	   matchTest(path, pathWhiteList, "DIRECT", url))  { 
+		return "DIRECT";
 	}
 
-	if(matchTest(host, hostBlockList)  || 
-	   matchTest(path, pathBlockList)) {
-		alert("BLOCKED: " + url.toString());
+	if(matchTest(host, hostBlockList, "BLOCKED", url)  || 
+	   matchTest(path, pathBlockList, "BLOCKED", url)) {
 		return "PROXY 127.0.0.1:0000";
 	}
 	
-	return dnsDirect(url);
+	return "DIRECT"; 
 }
 
