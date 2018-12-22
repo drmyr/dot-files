@@ -6,12 +6,18 @@ function notes() { cd ~/Git/notes && ll; }
 function dwn() { cd ~/Downloads && ll; }
 alias sb='source ~/.bashrc'
 alias gs='git status'
-alias gd='git diff'
+alias gd='git diff -U0'
 alias gc='git checkout'
 alias grso='git remote show origin'
 alias gls='git ls-files'
 alias glog='git log --all --oneline --graph --decorate --abbrev-commit --color'
 alias wth='curl http://wttr.in/cleveland'
+
+export HISTCONTROL=ignoredups:erasedups
+export HISTSIZE=100000
+export HISTFILESIZE=100000
+shopt -s histappend
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 function parse_git_branch() {
 	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1]/'
