@@ -11,7 +11,7 @@ alias gc='git checkout'
 alias grso='git remote show origin'
 alias gls='git ls-files'
 alias glog='git log --all --oneline --graph --decorate --abbrev-commit --color'
-alias wth='curl http://wttr.in/cleveland'
+alias wth='curl http://wttr.in/nashville'
 
 export HISTCONTROL=ignoredups:erasedups
 export HISTSIZE=100000

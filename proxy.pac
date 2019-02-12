@@ -328,6 +328,7 @@ let hostBlockList = [
 			/lphbs/,
 			/lpsnmedia/,
 			/lrcdn/,
+			/analytics\.lucidchart/,
 			/m2/,
 			/mailmunch/,
 			/marinsm/,
@@ -410,7 +411,7 @@ let hostBlockList = [
 			/perimeterx/,
 			/petametrics/,
 			/assets.pintrest/,
-			/[^(?:shop|va)]ping(dom)?/,
+			/[^(?:blee|shop|va)]ping(dom)?/,
 			/pippio/,
 			/pixel/,
       			/placemytag/,
@@ -552,7 +553,7 @@ let hostBlockList = [
 			/troncdata/,
 			/tru(optik|ste\.)/,
 			/tubemogul/,
-			/[^(?:zero)]turn[^(?:er)]/,
+			/[^(?:sa|zero)]turn[^(?:er)]/,
 			/twimg/,
 			/tynt/,
 			/typekit/,
@@ -640,7 +641,7 @@ let pathBlockList = [
 				/browser[-_]?(metrics|type)/i,
 				/beacon/i,
 				/cablato/i,
-				/callback/i,
+	//			/callback/i,
 				/clear.*gif/i,
 				/campaign/i,
 				/cardlytics/i,
@@ -749,7 +750,8 @@ let pathBlockList = [
 
 let fullUrlWhiteList = [
 	/https:\/\/[a-z]*\.?stack(exchange|overflow)\.com\/questions\/\d+\//,
-	/https:\/\/\w{2,3}-{3}\w{2}-\w{8}\.googlevideo\.com\/(videoplayback|generate_204)/
+	/https:\/\/\w{2,3}-{3}\w{2}-\w{8}\.googlevideo\.com\/(videoplayback|generate_204)/,
+	/https:\/\/www\.youtube\.com\/yts\/jsbin\/player_ias-vflWb9AD2\/en_US\/base\.js/
 ];
 
 let hostWhiteList = [
@@ -788,6 +790,6 @@ function FindProxyForURL(url, host) {
 		return "PROXY 127.0.0.1:0000";
 	}
 	
-	return "DIRECT"; 
+	return "DIRECT";
 }
 
